@@ -1,0 +1,37 @@
+Last login: Tue Jun  4 20:37:32 on ttys004
+midori@komatsunoMacBook-Pro ~ % mkdir git_challenge
+midori@komatsunoMacBook-Pro ~ % cd git_challenge
+midori@komatsunoMacBook-Pro git_challenge % git init
+Initialized empty Git repository in /Users/midori/git_challenge/.git/
+midori@komatsunoMacBook-Pro git_challenge % git add hello_world.txt
+fatal: pathspec 'hello_world.txt' did not match any files
+midori@komatsunoMacBook-Pro git_challenge % git add /Users/midori/git_challenge
+midori@komatsunoMacBook-Pro git_challenge % git add hello_world.txt
+midori@komatsunoMacBook-Pro git_challenge % git commit -m "最初のコミット"        
+[main (root-commit) df4ca5d] 最初のコミット
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+midori@komatsunoMacBook-Pro git_challenge % git commit -m "日本語訳を追記"    
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   hello_world.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+midori@komatsunoMacBook-Pro git_challenge % git log -p /Users/midori/git_challenge
+commit df4ca5d0179e40d17bd5e2f4834be66e856e5f3a (HEAD -> main)
+Author: ‘mido1345’ <“mido.cla.v3v@gmail.com”>
+Date:   Wed Jun 5 14:51:58 2024 +0900
+
+    最初のコミット
+
+diff --git a/hello_world.txt b/hello_world.txt
+new file mode 100644
+index 0000000..2889c67
+--- /dev/null
++++ b/hello_world.txt
+@@ -0,0 +1 @@
++Hello,world!
+\ No newline at end of file
+midori@komatsunoMacBook-Pro git_challenge % 
